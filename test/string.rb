@@ -9,6 +9,7 @@ class StringTest < Test::Unit::TestCase
   def test_to_slug
     assert_equal "hello-world", "Hello World".to_slug
     assert_equal "hello-world-how-are-you", "Hello World, How are You?".to_slug
+    assert_equal "hello_world_how_are_you", "Hello World, How are You?".to_slug("_")
   end
 
   def test_to_email

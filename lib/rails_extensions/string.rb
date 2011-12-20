@@ -6,7 +6,7 @@ module RailsExtensions
     end
 
     def to_slug(delimiter="-")
-      self.gsub(/[^a-z0-9]/i, " ").strip.gsub(/\s/, '-').gsub(/-{2}/, '-').downcase
+      self.gsub(/[^a-z0-9]/i, " ").strip.gsub(/\s/, delimiter).gsub(/#{delimiter}{2}/, delimiter).downcase
     end
 
     def to_email

@@ -27,3 +27,11 @@ gem "rails_extensions", git: "git@github.com:AgilionApps/rails_extensions.git"
  # => "hello-world-how-are-you-today"
 
 ```
+
+## Testing
+
+At least for now...
+
+``` ruby
+ruby -Itest test/string.rb
+```
