@@ -1,4 +1,3 @@
-#
 module RailsExtensions
   module String
     def to_sha1
@@ -11,6 +10,14 @@ module RailsExtensions
 
     def to_email
       self.scan(/\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b/)
+    end
+    
+    def mentions
+      self.scan(/@[a-z_]+\b/)
+    end
+    
+    def hash_tags
+      self.scan(/#[a-z_]+\b/)      
     end
   end
 end

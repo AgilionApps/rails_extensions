@@ -13,8 +13,17 @@ class StringTest < Test::Unit::TestCase
   end
 
   def test_to_email
-    assert_equal Array, "".to_email.class, "".to_email.class
     assert "hello bseanvt@gmail.com how are you?".to_email.include?("bseanvt@gmail.com")
     assert "sean@agilionapps.com and adam@agilionapps.com are both email addresses".to_email.include?("adam@agilionapps.com")
+  end
+  
+  def test_mentions
+    assert_equal [], "hello world".mentions
+    assert_equal %W(@bseanvt @tristan), "Hi, @bseanvt and @tristan, what's up?".mentions
+  end
+  
+  def test_hash_tags
+    assert_equal [], "hellow world".hash_tags
+    assert_equal %W(#rails #ruby), "#rails is a framwork written in #ruby".hash_tags
   end
 end
