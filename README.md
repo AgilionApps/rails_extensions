@@ -1,5 +1,15 @@
 # Rails Extensions
 
+## Installation
+
+Place in your Gemfile and run bundle
+
+``` ruby
+
+gem "rails_extensions", git: "git@github.com:AgilionApps/rails_extensions.git"
+
+```
+
 ## String Class Extensions
 
 ``` ruby
