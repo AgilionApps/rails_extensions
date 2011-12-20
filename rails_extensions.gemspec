@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = RailsExtensions::VERSION
   s.authors     = ["Sean Behan"]
   s.email       = ["bseanvt@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://github.com/agilionapps.com/rails_extensions"
+  s.summary     = %q{Provides some useful methods.}
+  s.description = %q{Project will extend various classes found in Ruby on Rails framework.}
 
   s.rubyforge_project = "rails_extensions"
 
