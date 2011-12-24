@@ -8,16 +8,20 @@ module RailsExtensions
       self.gsub(/[^a-z0-9]/i, " ").strip.gsub(/\s/, delimiter).gsub(/#{delimiter}{2}/, delimiter).downcase
     end
 
+    def to_alpha_numeric
+      self.gsub(/[^a-z0-9]/i, " ").gsub(/\s{2,}/, ' ').strip
+    end
+
     def to_email
       self.scan(/\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b/)
     end
-    
+
     def mentions
       self.scan(/@[a-z_]+\b/)
     end
-    
+
     def hash_tags
-      self.scan(/#[a-z_]+\b/)      
+      self.scan(/#[a-z_]+\b/)
     end
   end
 end
