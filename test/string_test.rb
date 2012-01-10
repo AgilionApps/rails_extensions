@@ -14,7 +14,7 @@ class StringTest < Test::Unit::TestCase
 
   def test_to_alpha_numeric
     assert_equal "hello world how are you", "...hello-world, how...are you?".to_alpha_numeric
-    assert_equal "1 2 3 4 can I have a little more", "1,2,3,4... can I have a little more?".to_alpha_numeric    
+    assert_equal "1 2 3 4 can I have a little more", "1,2,3,4... can I have a little more?".to_alpha_numeric
   end
 
   def test_to_email
@@ -30,5 +30,9 @@ class StringTest < Test::Unit::TestCase
   def test_hash_tags
     assert_equal [], "hellow world".hash_tags
     assert_equal %W(#rails #ruby), "#rails is a framwork written in #ruby".hash_tags
+  end
+
+  def test_escape_acronyms
+    assert_equal "HELLO world", "hello world".escape_acronyms(/hello/)
   end
 end

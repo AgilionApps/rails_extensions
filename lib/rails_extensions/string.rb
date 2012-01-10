@@ -23,5 +23,11 @@ module RailsExtensions
     def hash_tags
       self.scan(/#[a-z_]+\b/)
     end
+
+    def escape_acronyms(regex)
+      self.gsub(regex) do |str|
+        str.upcase
+      end
+    end
   end
 end
