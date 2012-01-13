@@ -34,5 +34,6 @@ class StringTest < Test::Unit::TestCase
 
   def test_escape_acronyms
     assert_equal "HELLO world", "hello world".escape_acronyms(/hello/)
+    assert_equal "XML and CSS are my favorite acronyms", "xMl and CsS are my favorite acronyms".escape_acronyms(/css|xml/i)
   end
 end
